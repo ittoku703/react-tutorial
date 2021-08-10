@@ -1,0 +1,28 @@
+{
+  "name": "react-tutorial",
+  "version": "1.0.0",
+  "description": "This is React Tutorial (https://qiita.com/TsutomuNakamura/items/72d8cf9f07a5a30be048)",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack serve --mode development --content-base src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "react-tutorial"
+  },
+  "author": "shinzanmono",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@webpack-cli/serve": "^1.5.1",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
