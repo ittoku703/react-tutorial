@@ -1,6 +1,6 @@
-let debug = process.env.NODE_ENV !== "production"
+let debug   = process.env.NODE_ENV !== "production"
 let webpack = require('webpack')
-let path = require('path')
+let path    = require('path')
 
 module.exports = {
   context: path.join(__dirname, "src"), 
@@ -12,6 +12,7 @@ module.exports = {
       use: [{
         loader: 'babel-loader', 
         options: {
+          plugins: ['react-html-attrs'],
           presets: ['@babel/preset-react', '@babel/preset-env']
         }
       }]
