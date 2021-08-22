@@ -1,0 +1,44 @@
+.game {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  min-width: 320px;
+  text-align: center;
+}
+
+.game > * {
+  margin-bottom: 1rem;
+}
+
+.square {
+  background: white;
+  border: 3px solid #842029;
+  margin: 0 0 -3px -3px;
+  font-size: 3rem;
+  color: #343a40;
+  font-weight: bold;
+  text-align: center;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.status {
+  font-size: 1.4rem;
+  color: #0d6efd;
+}
+
+.game-info {
+  font-size: 1.2rem;
+}
+.game-info ol {
+  list-style: none;
+  padding-left: 0;
+}
+.game-info li button {
+  border: none;
+  background: white;
+  text-decoration: underline;
+  line-height: 3rem;
+}
+.game-info li button:hover {
+  color: $red-500;
+}
