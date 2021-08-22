@@ -3,9 +3,15 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    TicTacToe: './src/TicTacToe.js',
+    ListName: './src/ListName.js',
+    Clock: './src/Clock.js',
+  },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
