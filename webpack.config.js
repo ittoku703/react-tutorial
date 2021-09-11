@@ -4,14 +4,11 @@ const webpack = require("webpack");
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/index.js',
-    TicTacToe: './src/TicTacToe.js',
-    ListName: './src/ListName.js',
-    Clock: './src/Clock.js',
+    main: './src/app.js',
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    filename: '[name].js',
+    filename: '[name]-[hash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
