@@ -1,47 +1,37 @@
 {
   "name": "react-tutorial",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
-    "server": "node ./src/server.js",
-    "build": "webpack",
-    "webpack-dev-server": "./node_modules/.bin/webpack-dev-server --mode development --hot"
+    "start:client": "webpack-dev-server --config webpack.config.js",
+    "start": "babel-watch ./src_server/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shinzanmono/react-tutorial.git"
   },
-  "author": "shinzanmono",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/shinzanmono/react-tutorial/issues"
   },
-  "homepage": "https://github.com/shinzanmono/react-tutorial#readme",
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "babel-watch": "^7.5.0",
+    "core-js": "3",
     "css-loader": "^6.2.0",
     "express": "^4.17.1",
-    "file-loader": "^6.2.0",
-    "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.2",
     "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
+    "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-middleware": "^5.0.0",
-    "webpack-dev-server": "^4.0.0",
-    "webpack-node-externals": "^3.0.0"
+    "webpack-dev-middleware": "^5.1.0",
+    "webpack-dev-server": "^4.2.0",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
-    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

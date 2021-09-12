@@ -1,5 +1,5 @@
 # React Tutorial
 
-1. npm install
-2. npm start
-
+run `yarn start:client`
+or
+run `yarn start`

@@ -40,5 +40,5 @@
   line-height: 3rem;
 }
 .game-info li button:hover {
-  color: $red-500;
+  color: red;
 }
