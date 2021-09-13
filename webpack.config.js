@@ -8,7 +8,8 @@ module.exports = {
     host: 'localhost',
   },
   entry: {
-    app: ['./src_client/javascripts/index.js']
+    app: ['./src_client/javascripts/index.js'],
+    contents: ['./src_client/javascripts/contents.js'],
   },
   output: {
     path: path.join(__dirname, 'dist'),

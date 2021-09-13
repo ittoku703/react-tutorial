@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
-    "start": "babel-watch ./src_server/server.js"
+    "start:server": "babel-watch ./src_server/server.js"
   },
   "repository": {
     "type": "git",

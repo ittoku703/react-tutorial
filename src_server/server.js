@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
   res.sendFile(pathToHtml('index.html'))
 })
 
-app.get('/about', (req, res) => {
-  res.sendFile(pathToHtml('about.html'))
+app.get('/contents', (req, res) => {
+  res.sendFile(pathToHtml('contents.html'))
 })
 
 app.listen(port, () => {
