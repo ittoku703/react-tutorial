@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import '../stylesheets/style.css';
 import { Button } from './components/material/Button';
 import SignIn from './components/material/SignIn';
 

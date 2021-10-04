@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import '../stylesheets/style.css';
 import { Clock } from './components/react/Clock';
 import { ListName } from './components/react/ListName';
 import { TicTacToe } from './components/react/TicTacToe';

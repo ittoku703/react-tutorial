@@ -5,6 +5,7 @@
 // Go to moveボタンを押すと、前に打った場所からスタートができる
 
 import React from "react";
+import './TicTacToe.css';
 
 // マス目を生成
 function Square(props) {

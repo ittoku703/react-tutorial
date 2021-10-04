@@ -7,7 +7,7 @@ module.exports = {
     port: 8080,
     host: 'localhost',
   },
-  context: path.resolve(__dirname, 'src_client', 'javascripts'),
+  context: path.resolve(__dirname, 'src_client'),
   entry: {
     index: ['./index.js'],
     material: ['./material.js'],
