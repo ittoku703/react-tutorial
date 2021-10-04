@@ -10,7 +10,9 @@ const port = 8080
 const devServerEnables = true
 
 if (devServerEnables) {
-  config.entry.app.unshift('webpack-hot-middleware/client?reload=true&timeout=1000');
+  for (let i = 0; i < config.entry.length; i++) {
+    config.entry[i].unshift('webpack-hot-middleware/client?reload=true&timeout=1000');
+  }
   config.plugins.push(new webpack.HotModuleReplacementPlugin());
   const compiler = webpack(config);
   app.use(WebpackDevMiddleware(compiler, {

@@ -7,9 +7,13 @@ module.exports = {
     port: 8080,
     host: 'localhost',
   },
+  context: path.resolve(__dirname, 'src_client', 'javascripts'),
   entry: {
-    app: ['./src_client/javascripts/index.js'],
-    contents: ['./src_client/javascripts/contents.js'],
+    index: ['./index.js'],
+    contents: ['./contents.js'],
+    material: ['./material.js'],
+    mdn: ['./mdn.js'],
+    react: ['./react.js'],
   },
   output: {
     path: path.join(__dirname, 'dist'),

@@ -1,5 +1,5 @@
 # React Tutorial
 
-run `yarn start:client`
-or
-run `yarn start`
+client-side: `yarn start:client`
+server-side:  `yarn start:server`
+

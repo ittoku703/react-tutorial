@@ -12,7 +12,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import LockoutlinedIcon from "@material-ui/icons/LockOutlined"
-import { makeStyles } from "@material-ui/core/styles";  
+import { makeStyles } from "@material-ui/core/styles";
 
 function Copyright() {
   return (
@@ -56,7 +56,7 @@ export default function SignIn() {
   const handleChange = (e) => {
     setState({ state, [e.target.name]: e.target.checked });
   };
-  
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -89,7 +89,7 @@ export default function SignIn() {
             type="password"
             label="Password"
             name="password"
-            autoComplete="current-password" 
+            autoComplete="current-password"
           />
           <FormControlLabel
             control={
@@ -97,7 +97,7 @@ export default function SignIn() {
                 checked={state.checked}
                 onChange={handleChange}
                 name="checked"
-                color="primary" 
+                color="primary"
               />
             }
             label="Remember me"
@@ -114,7 +114,7 @@ export default function SignIn() {
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
-                Forgot password?
+                Forgot password hoge?
               </Link>
             </Grid>
             <Grid item>
