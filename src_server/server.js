@@ -27,10 +27,6 @@ app.get('/', (req, res) => {
   res.sendFile(pathToHtml('index.html'))
 })
 
-app.get('/contents', (req, res) => {
-  res.sendFile(pathToHtml('contents.html'))
-})
-
 app.listen(port, () => {
   console.log(`App listening to ${port}`)
 })

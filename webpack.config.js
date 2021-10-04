@@ -10,7 +10,6 @@ module.exports = {
   context: path.resolve(__dirname, 'src_client', 'javascripts'),
   entry: {
     index: ['./index.js'],
-    contents: ['./contents.js'],
     material: ['./material.js'],
     mdn: ['./mdn.js'],
     react: ['./react.js'],
