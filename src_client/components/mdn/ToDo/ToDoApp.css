@@ -1,0 +1,51 @@
+.to-do-app {
+  max-width: 600px;
+  border: 2px solid #ddd;
+  background-color: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  margin: 1rem 0;
+  max-width: 360px;
+
+}
+
+.btn {
+  width: 100%;
+  padding: 6px;
+  margin: 1rem 0;
+  color: white;
+  background-color: tomato;
+  max-width: 360px;
+}
+
+.btn__primary {
+  color: white;;
+  background-color: cornflowerblue;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.list-heading {
+  text-align: center;
+}
+
+.todo-list {
+  list-style-type: none;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin: 0 1rem;
+}

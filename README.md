@@ -27,3 +27,61 @@ URL: https://developer.mozilla.org/ja/docs/Learn/Tools_and_testing/Client-side_J
 
 > ReactではHelloWorldのようにパスカルケースを使う（javascriptでは キャメルケース: helloWorld）
 
+### Handling events
+
+- JavaScript
+
+```javascript
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+  alert("hi!");
+});
+```
+
+- React
+
+```react
+<button
+  type="button"
+  onClick={() => alert("hi!")}
+>
+  Say hi!
+</button>
+```
+
+**Handling form submission**
+
+- React
+
+```javascript
+function handleSubmit(e) {
+  e.preventDefault();
+  alert('Hello, world!');
+}
+...
+<form onSubmit={handleSubmit}>
+```
+
+**Handling form submission via callbacks**
+
+- React
+
+```react
+function addTask(name) {
+  alert(name);
+}
+
+<Form addTask={addTask} />
+/* ----------------------------------- */
+
+function handleSubmit(e) {
+  e.preventDefault();
+  props.addTask("Say Hello!");
+}
+```
+
+
+
+
+
