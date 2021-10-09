@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { nanoid } from "nanoid";
 import './ToDoApp.css';
 import ToDo from './ToDo.jsx';
 import Form from './Form.jsx';
 import FilterButton from "./FilterButton.jsx";
+
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
 
 const TO_DO_APP_TASK_DATA = [
   { id: "todo-0", name: "Eat", completed: true },
@@ -21,7 +29,8 @@ const FILTER_MAP = {
 // todo application
 // Add: What needs to be done?の下のインプットに入力しAddボタンを押すと
 // taskが追加される
-// filter:
+// filter: All, Active, Completedの３種類ある。
+// Activeはまだ終わっていないタスク、Completedはすでに終了しているタスクになる。
 // Edit: 編集用のフォームが現れ、入力するとtaskの項目が変更される。
 // また、Cancelすることも可能
 // Delete: ボタンを押すとtaskが消去される
@@ -92,13 +101,23 @@ export default function App(props) {
     setTasks([...tasks, newTask]);
   }
 
+  const listHeadingRef = useRef(null);
+  const prevTaskLength = usePrevious(tasks.length);
+
+  // taskが減少した場合, (0-9) task remaining にフォーカスする
+  useEffect(() => {
+    if (tasks.length - prevTaskLength === -1) {
+      listHeadingRef.current.focus();
+    }
+  }, [tasks.length, prevTaskLength]);
+
   return (
     <div className="todoapp stack-large">
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         {filterList}
       </div>
-      <h2 id="list-heading">
+      <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
         {headingText}
       </h2>
       <ul

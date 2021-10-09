@@ -81,7 +81,33 @@ function handleSubmit(e) {
 }
 ```
 
+- React.useState
 
+```react
+import React, {useState} from 'react';
+
+const [names, setNames] = useState(null);
+
+setNames('hoge');
+console.log(names);  // hoge
+
+setNames(...names, 'bar');
+console.log(names);  // [hoge, bar]
+```
+
+- React.useEffect, React.useRef
+
+```react
+import React, {useEffect, useRef} from 'react';
+
+const elementRef = useRef(null);
+
+useEffect(() => {
+  elementRef.current.focus();
+}, Deps)
+
+<ele ref={elementRef} />
+```
 
 
 

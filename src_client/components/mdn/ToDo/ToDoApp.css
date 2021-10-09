@@ -28,6 +28,11 @@ input {
   max-width: 360px;
 }
 
+.btn:focus, h2:focus {
+  outline: 3px dashed #228bec;
+  outline-offset: 0;
+}
+
 .btn__primary {
   color: white;;
   background-color: cornflowerblue;

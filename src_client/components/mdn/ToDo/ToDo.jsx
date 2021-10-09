@@ -1,4 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
 
 export default function ToDo(props) {
   const [isEditing, setEditing] = useState(false);
@@ -17,6 +25,22 @@ export default function ToDo(props) {
     setEditing(false);
   }
 
+  const editFieldRef = useRef(null);
+  const editButtonRef = useRef(null);
+
+  const wasEditing = usePrevious(isEditing);
+
+  // Edit buttonが押されたら、入力Formをフォーカス
+  // Cancel buttonが押されたら、Edit buttonをフォーカス
+  useEffect(() => {
+    if (!wasEditing && isEditing) {
+      editFieldRef.current.focus();
+    }
+    if (wasEditing && !isEditing) {
+      editButtonRef.current.focus();
+    }
+  }, [wasEditing, isEditing]);
+
   // 編集用view
   const editingTemplate = (
     <form className="stack-small" onSubmit={handleSubmit}>
@@ -30,6 +54,7 @@ export default function ToDo(props) {
           type="text"
           value={newName}
           onChange={handleChange}
+          ref={editFieldRef}
         />
       </div>
       <div className="btn-group">
@@ -39,7 +64,7 @@ export default function ToDo(props) {
           onClick={() => setEditing(false)}
         >
           Cancel
-          <span className="visually-hidden">renaming {props.name}</span>
+          <span className="visually-hidden"> renaming {props.name}</span>
         </button>
         <button type="submit" className="btn btn__primary todo-edit">
           Save
@@ -68,6 +93,7 @@ export default function ToDo(props) {
           type="button"
           className="btn"
           onClick={() => setEditing(true)}
+          ref={editButtonRef}
         >
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
